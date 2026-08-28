@@ -1,0 +1,36 @@
+print("STARTING CALCULTOR")
+def add(x,y):
+    return x + y
+def subtract(x,y):
+    return x - y
+def multiply(x,y):
+    return x*y
+def divide(x,y):
+    return x/y
+
+def menu():
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    choice = int(input("What function would you like to use?: "))
+    return choice
+
+choice = menu()
+
+if choice < 1 or choice > 4:
+    print("Invalid option")
+else:
+    x = int(input("Enter your first number: "))
+    y = int(input("Enter your second number: "))
+    if choice == 1:
+        print(add(x,y))
+    elif choice == 2:
+        print(subtract(x,y))
+    elif choice == 3:
+        print(multiply(x,y))
+    elif choice == 4:
+        if y == 0:
+            print("Cannot divide by zero!")
+        else:
+            print(divide(x,y))
